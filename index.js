@@ -1,3 +1,3 @@
-const { OdooJsonRpcConnection } = require("./OdooJsonRpcConnection")
+const { OdooJsonRpcConnection } = require("./OdooJsonRpcConnection");
 
-module.exports = OdooJsonRpcConnection
+module.exports = { OdooJsonRpcConnection };
