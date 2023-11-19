@@ -1,5 +1,5 @@
 {
-  "name": "@odoo-json-rpc-connection",
+  "name": "odoojsonrpcconnection",
   "main": "dist/OdooJsonRpcConnection.js",
   "devDependencies": {
     "typescript": "^4.0.0"
