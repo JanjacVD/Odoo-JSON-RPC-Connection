@@ -36,19 +36,24 @@ const domain: DomainType = [
 ]; // Your domain criteria
 const page = 1;
 const limit = 10;
-const sessionId = "Your session id you get upon login";
-//Sometimes it is not necessary depending on the version it may or may not read cookies
-const user: UserContext = {
-  //...User context from login
-};
+let data;
+
+try{
+    const loginResponse =await OdooJsonRpcConnection.handleLogin("https://somelogin.com",
+    {db:"db_name", login:"username",password:"password"});
+}
+catch(e){
+    console.log(e)
+}
+
 try {
   const response: OdooResponse<YourResponseType> =
     await OdooJsonRpcConnection.handleRequest<YourResponseType>(
       odooRequest,
       page,
       domain,
-      user,
-      sessionId,
+      data.user_context,
+      data.session_id,
       limit
     );
 
@@ -69,6 +74,6 @@ try {
 }
 
 try{
-    OdooJsonRpcConnection.handleLogout(sessionId:string)
+    OdooJsonRpcConnection.handleLogout(data.session_id)
 }
 ```
