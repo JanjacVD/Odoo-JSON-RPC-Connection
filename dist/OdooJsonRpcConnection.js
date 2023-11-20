@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OdooJsonRpcConnection = void 0;
 const axios_1 = require("axios");
 class OdooJsonRpcConnection {
     static handleRequest(props, page, domain, limit) {
@@ -29,8 +28,23 @@ class OdooJsonRpcConnection {
                     args: props.args || [],
                     kwargs: reqArgs,
                 },
+            }, {
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+            });
+        });
+    }
+    static handleLogin(url, payload) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return axios_1.default.post(url + "/web/session/authenticate", { jsonrpc: "2.0", params: payload }, {
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
             });
         });
     }
 }
-exports.OdooJsonRpcConnection = OdooJsonRpcConnection;
+exports.default = OdooJsonRpcConnection;

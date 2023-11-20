@@ -1,6 +1,6 @@
 {
   "name": "odoojsonrpcconnection",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "The library is designed to facilitate communication with an Odoo server, which is an open-source ERP (Enterprise Resource Planning) system. The communication is established using the JSON-RPC (Remote Procedure Call) protocol.",
   "main": "./dist/OdooJsonRpcConnection.js",
   "types": "./src/OdooJsonRpcConnection.ts",

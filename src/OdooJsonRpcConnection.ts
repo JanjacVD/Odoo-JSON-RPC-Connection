@@ -6,7 +6,7 @@ import {
   OdooResponse,
 } from "./types";
 import axios from "axios";
-export class OdooJsonRpcConnection {
+export default class OdooJsonRpcConnection {
   public static async handleRequest<T>(
     props: OdooRequestProps,
     page: number,
