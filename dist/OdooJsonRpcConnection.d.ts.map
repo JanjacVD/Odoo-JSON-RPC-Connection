@@ -1,0 +1,1 @@
+{"version":3,"file":"OdooJsonRpcConnection.d.ts","sourceRoot":"","sources":["../src/OdooJsonRpcConnection.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,gBAAgB,EAAE,YAAY,EAAE,MAAM,SAAS,CAAC;AAErE,qBAAa,qBAAqB;WACV,aAAa,CAAC,CAAC,EAC/B,KAAK,EAAE,gBAAgB,EACvB,IAAI,EAAE,MAAM,EACZ,MAAM,EAAE,UAAU,EAClB,KAAK,CAAC,EAAE,MAAM;CAmBrB"}
